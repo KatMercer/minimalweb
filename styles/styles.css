@@ -1,0 +1,151 @@
+/*ACCESSIBILITY*/
+
+:focus {
+    outline: 3px solid #DD356F;
+}
+
+a.skip-main {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+a.skip-main:focus {
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow: auto;
+    margin: 0 35%;
+    padding: 5px;
+    font-size: 20px;
+    outline: 3px solid #DD356F;
+    outline-offset: -3px;
+    text-align: center;
+    z-index: 999;
+}
+
+.topnav a:focus {
+  outline-offset: -3px;
+}
+
+/**************/
+
+html, body {
+  height: 100%;
+}
+
+a {
+  color: #3DDBFF;
+}
+
+body {
+  background: #444444;
+  color: #FFFFFF;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  background: #555555;
+  color: #CCCCCC;
+  text-align: center;
+  font-size: 13px;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* fix for non tabbable element focused by mouse click */
+#main:focus {
+  outline: none;
+}
+
+#main {
+  margin: auto;
+}
+
+#additional {
+  margin: auto;
+}
+
+
+/* navigation bar */
+
+.topnavdiv {
+  width: 100%;
+  border-bottom: 2px solid #3DDBFF;
+  display: inline-block;
+  background: #333333;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li.right {
+  float: right;
+}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {
+  background-color: #000000;
+  color: #3DDBFF;
+}
+
+ul.topnav li a.active {
+  background-color: #3DDBFF;
+  color: #000000;
+}
+
+/* responsive design */
+
+@media only screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {
+    float: none;
+  }
+  .topnav {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #main {
+    margin: 5vh 5vw 5vh 5vw;
+  }
+}
